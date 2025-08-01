@@ -1,22 +1,16 @@
 // console.log(process.argv);
 const args = process.argv.slice(2);
 
-// console.log(args);
-
-//sum.js takes 2 numbers and adds them together
 if (args.length !== 2) {
   console.error("Please provide exactly 2 numbers");
-  //   return;
   process.exit(1);
 }
 
 if (typeof args[1] !== "number") {
   console.error("Please provide the second value as number");
-  //   return;
-  process.exit(1);
+  process.exit(2);
 }
 
-const num1 = parseFloat(args[0]);
 let angabe1 = args[0].toLowerCase().trim();
 let angabe2 = parseFloat(args[1]);
 const alphabet = [
@@ -48,7 +42,6 @@ const alphabet = [
   "z",
 ];
 
-// console.log(alphabet[1]);
 function findIndex(param) {
   const indexLetter = alphabet.indexOf(param);
   return indexLetter;
