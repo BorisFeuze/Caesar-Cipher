@@ -50,13 +50,11 @@ function findIndex(param) {
 const arrayAngabe = angabe1.split(" ");
 console.log(arrayAngabe);
 
-let temporalyResult = [];
-
 let result = [];
 
 for (let i = 0; i < arrayAngabe.length; i++) {
   let word = arrayAngabe[i];
-
+  let temporalyResult = [];
   let arrayWord = Array.from(word);
   // console.log(arrayWord);
 
@@ -76,7 +74,6 @@ for (let i = 0; i < arrayAngabe.length; i++) {
   }
   result.push(temporalyResult.join(""));
   // console.log(result);
-  temporalyResult = [];
 }
 
 let finalResult = result.join(" ");
