@@ -6,7 +6,7 @@ if (args.length !== 2) {
   process.exit(1);
 }
 
-if (typeof args[1] !== "number") {
+if (typeof +args[1] !== "number") {
   console.error("Please provide the second value as number");
   process.exit(2);
 }
@@ -50,15 +50,13 @@ function findIndex(param) {
 const arrayAngabe = angabe1.split(" ");
 console.log(arrayAngabe);
 
-let temporalyResult = [];
-
 let result = [];
 
 for (let i = 0; i < arrayAngabe.length; i++) {
   let word = arrayAngabe[i];
-
+  let temporalyResult = [];
   let arrayWord = Array.from(word);
-  console.log(arrayWord);
+  // console.log(arrayWord);
 
   for (let i = 0; i < arrayWord.length; i++) {
     findIndex(arrayWord[i]);
@@ -75,9 +73,10 @@ for (let i = 0; i < arrayAngabe.length; i++) {
     }
   }
   result.push(temporalyResult.join(""));
-  console.log(result);
-  temporalyResult = [];
+  // console.log(result);
 }
 
 let finalResult = result.join(" ");
 console.log(finalResult);
+
+process.exit(0);
