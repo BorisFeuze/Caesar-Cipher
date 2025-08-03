@@ -58,7 +58,7 @@ for (let i = 0; i < arrayAngabe.length; i++) {
   let word = arrayAngabe[i];
 
   let arrayWord = Array.from(word);
-  console.log(arrayWord);
+  // console.log(arrayWord);
 
   for (let i = 0; i < arrayWord.length; i++) {
     findIndex(arrayWord[i]);
@@ -75,9 +75,11 @@ for (let i = 0; i < arrayAngabe.length; i++) {
     }
   }
   result.push(temporalyResult.join(""));
-  console.log(result);
+  // console.log(result);
   temporalyResult = [];
 }
 
 let finalResult = result.join(" ");
 console.log(finalResult);
+
+process.exit(0);
