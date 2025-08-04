@@ -6,7 +6,7 @@ if (args.length !== 2) {
   process.exit(1);
 }
 
-if (typeof +args[1] !== "number") {
+if (typeof args[1] !== "number") {
   console.error("Please provide the second value as number");
   process.exit(2);
 }
