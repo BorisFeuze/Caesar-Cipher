@@ -2,10 +2,9 @@
 const args = process.argv.slice(2);
 
 if (args.length !== 2) {
-  console.error("Please provide exactly 2 numbers");
+  console.error("Please provide a word or phrase and a number");
   process.exit(1);
 }
-
 
 let angabe1 = args[0].toLowerCase().trim();
 let angabe2 = parseFloat(args[1]);
