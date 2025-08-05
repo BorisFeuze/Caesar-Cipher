@@ -10,6 +10,7 @@ let angabe1 = args[0].toLowerCase().trim();
 let angabe2 = parseFloat(args[1]);
 
 if (typeof +args[1] !== "number") {
+
   console.error("Please provide the second value as number");
   process.exit(2);
 }
